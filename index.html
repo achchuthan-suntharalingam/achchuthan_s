@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achchuthan Suntharalingam - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+        }
+        .skill-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(168, 139, 250, 0.1);
+            border: 1px solid rgba(168, 139, 250, 0.3);
+            border-radius: 20px;
+            color: #a78bfa;
+            font-size: 14px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            background: rgba(168, 139, 250, 0.2);
+            border-color: rgba(168, 139, 250, 0.6);
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 12px;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #a78bfa;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-slate-950 bg-opacity-95 backdrop-blur-sm border-b border-slate-800 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-2xl font-bold gradient-text">AS</span>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
+            <ul class="flex flex-col space-y-4 p-6">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-950 to-slate-900 pt-20">
+        <div class="text-center px-6 max-w-4xl">
+            <!-- Profile Photo -->
+            <div class="mb-8">
+                <img src="https://via.placeholder.com/200" alt="Profile Photo" class="w-48 h-48 rounded-full mx-auto border-4 border-slate-800 shadow-2xl object-cover hover:border-purple-500 transition-all duration-300">
+            </div>
+            
+            <!-- Name and Designation -->
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">
+                <span class="gradient-text">Achchuthan</span> Suntharalingam
+            </h1>
+            <h2 class="text-2xl md:text-3xl text-slate-400 mb-6">Full Stack Developer | Tech Enthusiast</h2>
+            
+            <!-- CTA Buttons -->
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="#contact" class="px-8 py-3 bg-purple-600 rounded-lg font-semibold hover:bg-purple-700 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50">Get In Touch</a>
+                <a href="https://github.com/achchuthan-suntharalingam" target="_blank" class="px-8 py-3 border-2 border-purple-500 rounded-lg font-semibold hover:bg-purple-500 hover:bg-opacity-10 transition-all duration-300">View GitHub</a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="animate-bounce">
+                <i class="fas fa-chevron-down text-purple-400 text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 section-title">About Me</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                        Welcome! I'm a passionate full-stack developer with a keen interest in building scalable web applications and innovative solutions. With a strong foundation in modern web technologies, I love transforming ideas into digital experiences.
+                    </p>
+                    <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                        I'm committed to continuous learning and staying updated with the latest trends in web development. My approach combines technical excellence with creative problem-solving to deliver impactful results.
+                    </p>
+                    <p class="text-slate-300 text-lg leading-relaxed">
+                        When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or collaborating with fellow developers on exciting ventures.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-code text-purple-400 text-2xl mr-4"></i>
+                            <h3 class="text-xl font-semibold">Passionate Developer</h3>
+                        </div>
+                        <p class="text-slate-400">Crafting elegant solutions to complex problems with clean, maintainable code.</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-lightbulb text-purple-400 text-2xl mr-4"></i>
+                            <h3 class="text-xl font-semibold">Innovation Focused</h3>
+                        </div>
+                        <p class="text-slate-400">Always exploring new technologies and approaches to improve user experiences.</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-users text-purple-400 text-2xl mr-4"></i>
+                            <h3 class="text-xl font-semibold">Team Collaborator</h3>
+                        </div>
+                        <p class="text-slate-400">Believing in the power of teamwork and shared knowledge to achieve great goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 section-title">Education</h2>
+            
+            <div class="space-y-8">
+                <div class="card-hover bg-slate-900 p-8 rounded-lg border border-slate-800 hover:border-purple-500">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold">Bachelor of Science in Computer Science</h3>
+                            <p class="text-purple-400 font-semibold">University Name</p>
+                        </div>
+                        <span class="text-slate-400 text-lg">2020 - 2024</span>
+                    </div>
+                    <p class="text-slate-300 mb-4">GPA: 3.8/4.0</p>
+                    <p class="text-slate-400">Relevant coursework: Data Structures, Algorithms, Web Development, Database Management, Software Engineering</p>
+                </div>
+
+                <div class="card-hover bg-slate-900 p-8 rounded-lg border border-slate-800 hover:border-purple-500">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold">Advanced Web Development Certification</h3>
+                            <p class="text-purple-400 font-semibold">Online Learning Platform</p>
+                        </div>
+                        <span class="text-slate-400 text-lg">2023</span>
+                    </div>
+                    <p class="text-slate-400">Specialized in React, Node.js, and full-stack JavaScript development with hands-on projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 section-title">Work Experience</h2>
+            
+            <div class="space-y-8">
+                <div class="card-hover bg-slate-800 p-8 rounded-lg border border-slate-700 hover:border-purple-500">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold">Senior Frontend Developer</h3>
+                            <p class="text-purple-400 font-semibold">Tech Company Inc.</p>
+                        </div>
+                        <span class="text-slate-400 text-lg">Jan 2024 - Present</span>
+                    </div>
+                    <ul class="text-slate-300 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-400 mr-3 mt-1"></i>
+                            <span>Led frontend optimization reducing page load time by 40%</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-400 mr-3 mt-1"></i>
+                            <span>Mentored 3 junior developers and conducted code reviews</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-400 mr-3 mt-1"></i>
+                            <span>Implemented responsive design patterns across 10+ components</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-hover bg-slate-800 p-8 rounded-lg border border-slate-700 hover:border-purple-500">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold">Full Stack Developer</h3>
+                            <p class="text-purple-400 font-semibold">Digital Solutions Ltd.</p>
+                        </div>
+                        <span class="text-slate-400 text-lg">Jun 2023 - Dec 2023</span>
+                    </div>
+                    <ul class="text-slate-300 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-400 mr-3 mt-1"></i>
+                            <span>Developed full-stack MERN applications for clientele</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-400 mr-3 mt-1"></i>
+                            <span>Implemented REST APIs and database optimization strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-400 mr-3 mt-1"></i>
+                            <span>Collaborated with UI/UX team to deliver pixel-perfect designs</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-hover bg-slate-800 p-8 rounded-lg border border-slate-700 hover:border-purple-500">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold">Junior Developer Intern</h3>
+                            <p class="text-purple-400 font-semibold">StartUp Innovations</p>
+                        </div>
+                        <span class="text-slate-400 text-lg">Jan 2023 - May 2023</span>
+                    </div>
+                    <ul class="text-slate-300 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-400 mr-3 mt-1"></i>
+                            <span>Built responsive web pages using HTML, CSS, and JavaScript</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-400 mr-3 mt-1"></i>
+                            <span>Fixed bugs and maintained existing codebase</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-400 mr-3 mt-1"></i>
+                            <span>Participated in daily standups and sprint planning meetings</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 section-title">Skills & Technologies</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Frontend -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Frontend Development</h3>
+                    <div class="flex flex-wrap">
+                        <span class="skill-badge">HTML5</span>
+                        <span class="skill-badge">CSS3</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Tailwind CSS</span>
+                        <span class="skill-badge">Vue.js</span>
+                        <span class="skill-badge">Responsive Design</span>
+                        <span class="skill-badge">Redux</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Backend Development</h3>
+                    <div class="flex flex-wrap">
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Express.js</span>
+                        <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">REST APIs</span>
+                        <span class="skill-badge">Authentication</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Firebase</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Tools & Platforms</h3>
+                    <div class="flex flex-wrap">
+                        <span class="skill-badge">Git/GitHub</span>
+                        <span class="skill-badge">VS Code</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">Postman</span>
+                        <span class="skill-badge">Figma</span>
+                        <span class="skill-badge">Linux</span>
+                        <span class="skill-badge">AWS</span>
+                        <span class="skill-badge">CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Soft Skills</h3>
+                    <div class="flex flex-wrap">
+                        <span class="skill-badge">Problem Solving</span>
+                        <span class="skill-badge">Communication</span>
+                        <span class="skill-badge">Team Leadership</span>
+                        <span class="skill-badge">Project Management</span>
+                        <span class="skill-badge">Agile/Scrum</span>
+                        <span class="skill-badge">Quick Learner</span>
+                        <span class="skill-badge">Attention to Detail</span>
+                        <span class="skill-badge">Time Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 section-title">Featured Projects</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="card-hover bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-purple-500">
+                    <div class="h-48 bg-gradient-to-br from-purple-900 to-blue-900 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-6xl text-purple-300 opacity-30"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-Commerce Platform</h3>
+                        <p class="text-slate-400 mb-4">A full-featured e-commerce platform built with React and Node.js, featuring product catalog, shopping cart, and secure checkout.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-purple-900 px-3 py-1 rounded-full">React</span>
+                            <span class="text-xs bg-purple-900 px-3 py-1 rounded-full">Node.js</span>
+                            <span class="text-xs bg-purple-900 px-3 py-1 rounded-full">MongoDB</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-purple-400 hover:text-purple-300 transition"><i class="fas fa-external-link-alt mr-2"></i>Live Demo</a>
+                            <a href="https://github.com/achchuthan-suntharalingam" target="_blank" class="text-purple-400 hover:text-purple-300 transition"><i class="fas fa-github mr-2"></i>Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card-hover bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-purple-500">
+                    <div class="h-48 bg-gradient-to-br from-blue-900 to-purple-900 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-6xl text-blue-300 opacity-30"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Task Management App</h3>
+                        <p class="text-slate-400 mb-4">A collaborative task management application with real-time updates, user authentication, and team collaboration features.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-900 px-3 py-1 rounded-full">React</span>
+                            <span class="text-xs bg-blue-900 px-3 py-1 rounded-full">Firebase</span>
+                            <span class="text-xs bg-blue-900 px-3 py-1 rounded-full">Tailwind</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-purple-400 hover:text-purple-300 transition"><i class="fas fa-external-link-alt mr-2"></i>Live Demo</a>
+                            <a href="https://github.com/achchuthan-suntharalingam" target="_blank" class="text-purple-400 hover:text-purple-300 transition"><i class="fas fa-github mr-2"></i>Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card-hover bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-purple-500">
+                    <div class="h-48 bg-gradient-to-br from-green-900 to-purple-900 flex items-center justify-center">
+                        <i class="fas fa-weather-cloud text-6xl text-green-300 opacity-30"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Weather Application</h3>
+                        <p class="text-slate-400 mb-4">A responsive weather app using OpenWeather API, displaying current conditions, forecasts, and interactive maps.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-900 px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="text-xs bg-green-900 px-3 py-1 rounded-full">API</span>
+                            <span class="text-xs bg-green-900 px-3 py-1 rounded-full">HTML/CSS</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-purple-400 hover:text-purple-300 transition"><i class="fas fa-external-link-alt mr-2"></i>Live Demo</a>
+                            <a href="https://github.com/achchuthan-suntharalingam" target="_blank" class="text-purple-400 hover:text-purple-300 transition"><i class="fas fa-github mr-2"></i>Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="card-hover bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-purple-500">
+                    <div class="h-48 bg-gradient-to-br from-red-900 to-blue-900 flex items-center justify-center">
+                        <i class="fas fa-video text-6xl text-red-300 opacity-30"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Video Streaming Platform</h3>
+                        <p class="text-slate-400 mb-4">A video streaming platform with user authentication, video upload, real-time comments, and recommendation system.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-red-900 px-3 py-1 rounded-full">MERN</span>
+                            <span class="text-xs bg-red-900 px-3 py-1 rounded-full">WebSocket</span>
+                            <span class="text-xs bg-red-900 px-3 py-1 rounded-full">AWS S3</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-purple-400 hover:text-purple-300 transition"><i class="fas fa-external-link-alt mr-2"></i>Live Demo</a>
+                            <a href="https://github.com/achchuthan-suntharalingam" target="_blank" class="text-purple-400 hover:text-purple-300 transition"><i class="fas fa-github mr-2"></i>Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 section-title">Get In Touch</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-600">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium">Email</h3>
+                            <p class="text-slate-400 mt-1"><a href="mailto:your.email@example.com" class="hover:text-purple-400 transition">your.email@example.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-600">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium">Phone</h3>
+                            <p class="text-slate-400 mt-1"><a href="tel:+1234567890" class="hover:text-purple-400 transition">+1 (234) 567-8900</a></p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-600">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium">Location</h3>
+                            <p class="text-slate-400 mt-1">City, Country</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-slate-900 p-8 rounded-lg border border-slate-800">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-purple-500 transition" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-purple-500 transition" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea rows="5" required class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-purple-500 transition" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-purple-600 rounded-lg font-semibold hover:bg-purple-700 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="mt-16 pt-12 border-t border-slate-800 text-center">
+                <p class="text-slate-400 mb-6">Connect With Me</p>
+                <div class="flex justify-center gap-8">
+                    <a href="https://linkedin.com/in/achchuthan-suntharalingam" target="_blank" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 hover:scale-110">
+                        <i class="fab fa-linkedin text-lg"></i>
+                    </a>
+                    <a href="https://github.com/achchuthan-suntharalingam" target="_blank" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 hover:scale-110">
+                        <i class="fab fa-github text-lg"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 hover:scale-110">
+                        <i class="fab fa-twitter text-lg"></i>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 hover:scale-110">
+                        <i class="fas fa-envelope text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8">
+        <div class="max-w-4xl mx-auto px-6 text-center text-slate-400">
+            <p>&copy; 2026 Achchuthan Suntharalingam. All rights reserved.</p>
+            <p class="mt-2 text-sm">Created with <i class="fas fa-heart text-red-500"></i> and passion for web development</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.style.borderBottomColor = '#475569';
+            } else {
+                navbar.style.borderBottomColor = '#1e293b';
+            }
+        });
+
+        // Active nav link highlighting
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    navLinks.forEach(link => {
+                        link.style.color = '#e2e8f0';
+                    });
+                    
+                    const activeLink = document.querySelector(`.nav-link[href="#${section.id}"]`);
+                    if (activeLink) {
+                        activeLink.style.color = '#a78bfa';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
